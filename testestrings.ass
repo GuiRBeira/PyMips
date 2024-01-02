@@ -1,0 +1,27 @@
+.data
+    string1: .asciiz "Ola, "
+    string2: .asciiz "mundo!"
+    string3: .asciiz "Isso e um exemplo."
+
+.text
+main:
+    # Imprime a primeira string
+    la $a0, string1
+    li $v0, 4
+    syscall
+
+    # Imprime a segunda string
+    la $a0, string2
+    li $v0, 4
+    syscall
+
+    # Imprime a terceira string
+    la $a0, string3
+    li $v0, 4
+    syscall
+
+    # Termina o programa
+    li $v0, 10
+    syscall
+
+

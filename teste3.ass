@@ -1,0 +1,20 @@
+# Programa em MIPS com instruções de salto
+.data
+.text
+main:
+    # Instrução de atribuição
+    li $t0, 7       # $t0 = 5
+    move $a0 $t0
+    # Instrução de salto condicional (beq)
+    beq $t0, $zero, equal_zero
+    addi $t1, $t0, 1 # $t1 = $t0 + 1
+    j end_program    # Pula para o final do programa
+equal_zero:
+    subi $t1, $t0, 1  # $t1 = $t0 - 1
+end_program:
+    li $v0 10
+syscall
+
+
+
+

@@ -1,0 +1,40 @@
+.data
+    str1: .asciiz "Hello, "
+    str2: .asciiz "world!"
+
+.text
+
+sair:
+    li $v0 10
+    syscall
+
+main:
+    # Carregar o endereço da primeira string (str1) no registrador $a0
+    la $a0, str1
+    # Imprimir a primeira string
+    li $v0, 4       # Código do serviço de impressão de string
+    syscall
+
+    # Carregar o endereço da segunda string (str2) no registrador $a0
+    la $a0, str2
+    # Imprimir a segunda string
+    li $v0, 4       # Código do serviço de impressão de string
+    syscall
+
+    # Executar instruções lógico-aritméticas
+    li $t0, 10      # Valor 10
+    li $t1, 5       # Valor 5
+
+    # Adição
+    add $t2, $t0, $t1
+
+    # Subtração
+    sub $t3, $t0, $t1
+
+    # Multiplicação
+    mul $t4, $t0, $t1
+
+    # Divisão
+    div $t5, $t2, $t3
+    j sair
+

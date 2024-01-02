@@ -1,0 +1,20 @@
+.data
+.text
+    li $t0, 5      # Inicializa $t0 com o valor 5
+    li $t1, 3      # Inicializa $t1 com o valor 3
+
+    add $t2, $t0, $t1   # $t2 = $t0 + $t1
+    sub $t3, $t2, $t1   # $t3 = $t2 - $t1
+
+    beq $t3, $zero, labelend  # Salta para label_end se $t3 for igual a zero
+
+    addi $t4, $t3, 1    # $t4 = $t3 + 1
+    j labelfinal       # Salta para label_final
+
+labelend:
+    li $t4, 99          # Se $t3 for igual a zero, $t4 recebe 99
+
+labelfinal:
+    # O código continua aqui
+
+

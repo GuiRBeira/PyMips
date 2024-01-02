@@ -1,0 +1,34 @@
+.data
+    prompt: .asciiz "Digite um número inteiro: "
+    result: .asciiz "O dobro do número digitado é: "
+
+.text
+main:
+    # Imprimir o prompt para o usuário
+    li $v0, 4           # Código do serviço de impressão de string
+    la $a0, prompt      # Carregar o endereço da string
+    syscall
+
+    # Ler um número inteiro do usuário
+    li $v0, 5           # Código do serviço de leitura de inteiro
+    syscall
+    move $t0, $v0       # Armazenar o número lido em $t0
+
+    # Calcular o dobro do número
+    li $t1, 2           # Constante 2
+    mul $t2, $t0, $t1   # Multiplicação: $t2 = $t0 * $t1
+
+    # Imprimir o resultado
+    li $v0, 4           # Código do serviço de impressão de string
+    la $a0, result      # Carregar o endereço da string
+    syscall
+
+    # Imprimir o dobro do número
+    li $v0, 1           # Código do serviço de impressão de inteiro
+    move $a0, $t2       # Carregar o dobro do número
+    syscall
+
+    # Encerrar o programa
+    li $v0, 10          # Código do serviço de término do programa
+    syscall
+

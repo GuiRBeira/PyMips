@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Moodle institucional da  UTFPR - Arquitetura e Organização de Computadores</title>
+    <link rel="stylesheet" type="text/css" href="..//shared/moodle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <div class="d-flex flex-column h-100">
+        <nav class="navbar navbar-light bg-white border-bottom">
+            <a class="navbar-brand" href="https://moodle.utfpr.edu.br" title="Moodle institucional da  UTFPR">
+                Moodle institucional da  UTFPR
+            </a>
+        </nav>
+        <main class="container-fluid mt-2 flex-grow-1 flex-shrink-1">
+            <div>
+                <h1><a href="../index.html">Arquitetura e Organização de Computadores</a></h1>
+                <p>ARCO3A-EC-AP</p>
+                    <h2>
+        Lista de Exercícios
+    </h2>
+
+    <div class="alert alert-info alert-block">
+        Este arquivo faz parte do conteúdo baixado de <a href="https://moodle.utfpr.edu.br/mod/page/view.php?id=1327085">Lista de Exercícios</a> em quinta, 14 dez 2023, 20:21. Observe que parte do conteúdo e quaisquer arquivos maiores que 128 Mb não são baixados.    </div>
+
+
+    <div>
+        <h3>Conteúdo da página</h3>
+        <div>
+            <div>
+                <p dir="ltr" style="text-align:left;">1) Faça as operações aritméticas abaixo utilizando os algoritmos apropriados. Descreva todas as etapas do cálculo de acordo com o algoritmo que você utilizou. Especifique para cada etapa: os registradores, a etapa realizada no trecho em questão.<br /><br />Exemplo:<br /><br />        Operação:<br /><br />         6 x 3<br /><br />        Registradores:<br /><br />          M = 0110   Q = 0011 A=0000<br /><br />         A       Q<br /><br />      0000   0011         \\ Q0 == 1<br /><br />      0110   0011         \\ A = A + M<br /><br />      0011   0001         \\ Deslocamento<br /><br />        ....<br /><br /><br /><br />a partir disso, calcular:<br /><br />    a) -3 x -5<br /><br />    b) 7 x 9<br /><br />    c)  9 / 3<br /><br />    d) 8 / 5<br /><br /><br /><br /><br /><br /><br /><br />2) Traduza os números a seguir para binário, de acordo com o formato de números com ponto flutuante apresentados em aula.<br /><br />os resultados devem apresentar o seguinte formato de 32 bits:<br /><br />Exemplo:<br /><br />Sinal       Expoente               Mantissa<br /><br />  0           00011101  10101111000000000000000<br /><br />A partir disso calcule:<br /><br />a) 37,8<br /><br />b) 90,56<br /><br />c) 14,1<br /><br />d) 19,99<br /><br />Apresentado todos os passos utilizados para normalizar o número, polarizar o expoente, e transformar a mantissa.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />3) Explique os passos para somar dois números em ponto flutuante.<br /><br /><br /><br /><br /><br /><br /><br />4) Explique o conceito de overflow na soma de inteiros.<br /><br /><br /><br /><br /><br /><br />5) void printSaldo(int saldo){<br /><br /><br />    printf("O saldo da sua conta é %i \n\n", saldo);<br /><br /><br />}<br /><br /><br />int soma_saldo(int saldo, int valor){<br /><br /><br />    saldo = saldo + valor;<br />    return saldo;<br /><br /><br />}<br /><br />int subtrai_saldo(int saldo, int valor){<br /><br /><br />    saldo = saldo - valor;<br />    return saldo;<br /><br /><br />}<br /><br />int saldo_disponivel(int salario,int divida){<br />    int saldo = 0;<br />    saldo = soma_saldo(saldo,salario);<br />    saldo = subtrai_saldo(saldo,divida);<br />    return saldo;<br />}<br /><br />void main(){<br /><br />    int salario,divida,saldo=0;<br />    printf("Entre com seu salário\n");<br />    scanf("%i",&amp;salario);<br />    printf("Entre com sua dívida\n");<br />    scanf("%i",&amp;divida);<br /><br />    printSaldo(saldo_disponivel(salario,divida));<br />    <br />    <br />    <br />    exit(0);   <br />    <br /><br />}<br /><br />Em sua implementação em assembly do mips, siga as observações a seguir:<br /><br />- Dentro dos procedimentos, utilize apenas os registradores s0,s1,s2 e $v0 ou $v1 para realizar as implementações;<br /><br />- Siga as determinações do mips para chamadas de procedimento<br /><br /><br /><br /><br /><br />6) Implemente o seguinte programa em assembly do mips:<br />           int somador(int n){<br /><br />                      if(n &gt; 0)<br />                           return (n + somador(n-1));<br />                     else<br />                           return 0;<br />           }<br />           void main(){<br /><br />              int n;<br />              scanf("%d", &amp;n);<br />              printf("Resultado  %d\n\n",somador(n));<br />           }<br /><br />Dica: Siga as diretivas do mips para as chamadas de procedimentos e funções.<br /><br /><br /><br /><br /><br />7) Implemente uma versão da função strlen(str) em assembly do mips utilizando ponteiro, e outra versão utilizando array. Compare as duas versões. <br /><br /><br /><br />8) Desenhe o caminho de dados de um processador (monociclo) MIPS para executar as seguintes instruções:<br /><br />      a) add $t0, $t1, $t2<br /><br />      b) addi $t0, $t1, 20<br /><br />      c) j saida<br />      <br />      d) beq $t0, $zero, saida<br />      <br />Para cada item, desenhe apenas o diagrama com os elementos principais para executar cada instrução. Os elementos do datapath a serem considerados nos diagramas são os seguintes:<br /><br />PC, Memória de Dados, Memória de Instruções, Banco de Registradores, ULA, Somadores, Extensor de Sinal <br /><br /><br /><br />9) A partir das seguintes instruções, simule a execução do pipeline do mips por meio de um teste de mesa.<br /><br /><br />         add $t0,$zero,$t1<br /><br />         lw $s2,0($sp)<br /><br />         addi $t4, $s2, 10<br /><br />         sll $s0,$s1, 2 <br /><br /><br /><br /><br />10) implemente em assembly do mips um código equivalente para rodar o seguinte trecho de código em C:<br /><br />n= 0;<br /><br />    while(n != 10)<br /><br />         n++;<br /><br />     printf(n);<br /><br />Simule a execução por meio de um teste de mesa, como realizado em aula, considerando o  pipeline do mips.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+
+            </div>
+        </main>
+        <footer id="page-footer" class="py-3">
+            <div class="container">
+                <div>Este arquivo faz parte do conteúdo descarregado de <a href="https://moodle.utfpr.edu.br/course/view.php?id=18616">Arquitetura e Organização de Computadores</a> por GUILHERME RICARDO BEIRA em quinta, 14 dez 2023, 20:21</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

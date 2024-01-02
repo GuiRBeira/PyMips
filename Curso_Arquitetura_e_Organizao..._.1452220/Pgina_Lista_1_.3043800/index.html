@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Moodle institucional da  UTFPR - Arquitetura e Organização de Computadores</title>
+    <link rel="stylesheet" type="text/css" href="..//shared/moodle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <div class="d-flex flex-column h-100">
+        <nav class="navbar navbar-light bg-white border-bottom">
+            <a class="navbar-brand" href="https://moodle.utfpr.edu.br" title="Moodle institucional da  UTFPR">
+                Moodle institucional da  UTFPR
+            </a>
+        </nav>
+        <main class="container-fluid mt-2 flex-grow-1 flex-shrink-1">
+            <div>
+                <h1><a href="../index.html">Arquitetura e Organização de Computadores</a></h1>
+                <p>ARCO3A-EC-AP</p>
+                    <h2>
+        Lista 1
+    </h2>
+
+    <div class="alert alert-info alert-block">
+        Este arquivo faz parte do conteúdo baixado de <a href="https://moodle.utfpr.edu.br/mod/page/view.php?id=1532866">Lista 1</a> em quinta, 14 dez 2023, 20:21. Observe que parte do conteúdo e quaisquer arquivos maiores que 128 Mb não são baixados.    </div>
+
+
+    <div>
+        <h3>Conteúdo da página</h3>
+        <div>
+            <div>
+                <p dir="ltr" style="text-align:left;"></p><p></p><p dir="ltr">1) Faça o registrador $t0 e $t1 receberem os valores 15, e 30 
+respectivamente. E então faça um programa para somar $t0 e $1, jogando o
+ resultado da soma em $t3.</p><p dir="ltr">2) Faça o registrador $t0 e $t1 receberem os valores 10, e 20 
+respectivamente. E então faça um programa para resolver a seguinte expressão:</p><div><p dir="ltr">   $t3 = ($t0 + 4) - ($t1 - 6)</p><p dir="ltr">3) Faça um programa, em assembly do MIPS, para colocar o valor 5 na posição
+ 10 da memória. Agora coloque o valor 20 na posição 40 da memória.  Some
+ os conteúdos que estão na memória (5+20), e coloque o resultado na 
+posição 100 da memória.</p><p>4) Salve na memória o valor 100, na posição 20 usando como base o registrador $zero. Depois salve 200 na posição 40.</p><p>5) Reproduza o programa visto durante a aula (slide 25). Leia e explique cada linha de código.</p></div><p>6) Faça um programa, em assembly do mips, que receba um valor inteiro do 
+teclado, se esse valor for igual a 10 imprima-o na tela e saia do 
+programa. Senão imprima 0 e saia do programa.</p><p>7) Faça um programa, em assembly do mips, que receba dois inteiros do 
+teclado, e imprima o maior. Se os números forem iguais imprima -111.</p><p>8) Faça um programa, em assembly do MIPS, que receba e multiplique dois inteiros <strong>sem usar a instrução de multiplicação do MIPS.</strong> Imprima o resultado na tela.</p><p>9) Codifique um programa correspondente ao seguinte código em c: <br />    <br />    int a = 3;<br />    int b = 4;<br />    int m = 10;<br />    m = a;<br />    if ( b &lt; m ) <br />        m = b;<br />    <br />    printf("%i", m);<br />                <br />    <br />Agora, teste a e b com outros valores.</p><p>10) Codifique em assembly do mips um programa correspondente a :<br /></p><div><br />    int a = 2;<br />    int b = 10;<br />    x = 0;<br />    if ( a &gt;= 0 &amp;&amp; b &lt;= 50 )<br />         x = 1;<br />    printf("%i", x);<br /></div><div>Agora, teste a e b com outros valores.</div><div><br /></div><div>11) Codifique em assembly do mips um programa correspondente a:<br /><br /><br />    int i = 0;<br />    int j = 10;<br />    int k = 0;<br /><br />    while (i &lt; j){<br /><br />        i++;<br />        k +=10;<br /><br />    }<br /><br /><br />    printf("%i", i);<br />    printf("%i", k);<br /></div><p><br /></p><p dir="ltr">12) A partir do código assembly do mips, ao qual implementa o programa a seguir:<br /><br /><br />    int fat = 0;<br />    int n = 5;<br />         <br />    for(fat = 1; n &gt; 1; n = n - 1)<br />        fat = fat * n;<br />     <br />    printf("%d", fat);</p><div><strong>OBS: Não utilize a instrução MUL, faça a partir de sucessivas somas.</strong></div><div><br /></div><div><strong></strong><p dir="ltr"><strong><br /></strong></p><strong></strong><br /><strong></strong>13) Implementar o código correspondente em mips</div><div><br /><p dir="ltr">    int vetor[] = {3, 0, 1, 2, -6, -2, 4, 10, 3, 7, 8, -9, -15, -20, -87, -100}</p>    printf("Seja bem vindo! \nPor favor entre com um valor inteiro para pesquisar no vetor\n\n");<br /><strong></strong><p dir="ltr"><strong>    scanf("%i", elemento);<br /><br />    while(vetor[i] != -100){<br /><br />        if(vetor[i] == elemento){ <br />            printf("Elemento %i encontrado\n\n", elemento );<br />            exit(0);<br />        }<br /><br />        i++;<br />    }<br /><br />    printf("Elemento não encontrado\n\n");<br />    exit(0);<br /></strong></p><strong></strong>14) Faça um programa, em assembly do mips, para somar dois vetores (V1 e V2) onde:<p dir="ltr">        v1 = {10,20,30,40,50,60}</p><p dir="ltr">        v2 = {0,10,-15, 16, 20, 30}</p><p dir="ltr">    O programa deverá percorrer os dois vetores somando cada elemento e colocando os mesmos no vetor resultante.</p><p dir="ltr">    A saída desejada é apresentada a seguir: <br /></p><p dir="ltr">    A soma dos vetores v0 e v1 é:</p><p dir="ltr">          10, 30, 15, 56, 70, 90<br /></p><p dir="ltr"> </p><p dir="ltr">    OBS: Modele primeiro a solução em C depois traduza para assembly</p></div><br /><p></p><p><br /></p><p><br /></p><p>15) Implemente o seguinte programa em assembly do mips:</p>           int somador(int n){
+<p>                      if(n &gt; 0) <br />                           return (n + somador(n-1));<br />                     else <br />                           return 0;<br />           }</p>           void main(){<br /><p>              int n;<br />              scanf("%d", &amp;n);<br />              printf("Resultado  %d\n\n",somador(n));<br />           }</p>
+<p>Dica: Siga as diretivas do mips para as chamadas de procedimentos e funções.</p>
+<p><br /></p>
+<p>16) Implemente uma versão da função strlen(str) em assembly do mips 
+utilizando ponteiro, e outra versão utilizando array. Compare as duas 
+versões.</p>
+<p>17) Implemente uma versão da função strcmp(str1, str2) em assembly do mips.</p><br /><p></p>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+
+            </div>
+        </main>
+        <footer id="page-footer" class="py-3">
+            <div class="container">
+                <div>Este arquivo faz parte do conteúdo descarregado de <a href="https://moodle.utfpr.edu.br/course/view.php?id=18616">Arquitetura e Organização de Computadores</a> por GUILHERME RICARDO BEIRA em quinta, 14 dez 2023, 20:21</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Exemplo de código MIPS para operações aritméticas e lógico-aritméticas
+
+.data
+    # Nenhum dado na seção de dados neste exemplo
+
+.text
+    # Seção de código
+
+    # Função principal
+    main:
+
+        # Inicializar registradores
+        li $t0, 5        # $t0 = 5
+        li $t1, 3        # $t1 = 3
+        li $t2, 0        # $t2 = 0
+
+        # Operação de adição
+        add $t2, $t0, $t1 # $t2 = $t0 + $t1
+
+        # Operação de subtração
+        sub $t2, $t2, $t0 # $t2 = $t2 - $t0
+
+        # Operação de multiplicação
+        mul $t2, $t2, $t1 # $t2 = $t2 * $t1
+
+        # Operação lógico-aritmética (AND)
+        and $t2, $t2, $t0 # $t2 = $t2 & $t0
+
+        # Encerrar o programa
+        li $v0, 10       # Código de serviço para encerrar o programa
+        syscall
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Moodle institucional da  UTFPR - Arquitetura e Organização de Computadores</title>
+    <link rel="stylesheet" type="text/css" href="..//shared/moodle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <div class="d-flex flex-column h-100">
+        <nav class="navbar navbar-light bg-white border-bottom">
+            <a class="navbar-brand" href="https://moodle.utfpr.edu.br" title="Moodle institucional da  UTFPR">
+                Moodle institucional da  UTFPR
+            </a>
+        </nav>
+        <main class="container-fluid mt-2 flex-grow-1 flex-shrink-1">
+            <div>
+                <h1><a href="../index.html">Arquitetura e Organização de Computadores</a></h1>
+                <p>ARCO3A-EC-AP</p>
+                    <h2>
+        Exemplos (Ponteiro vs Array)
+    </h2>
+
+    <div class="alert alert-info alert-block">
+        Este arquivo faz parte do conteúdo baixado de <a href="https://moodle.utfpr.edu.br/mod/page/view.php?id=916508">Exemplos (Ponteiro vs Array)</a> em quinta, 14 dez 2023, 20:21. Observe que parte do conteúdo e quaisquer arquivos maiores que 128 Mb não são baixados.    </div>
+
+
+    <div>
+        <h3>Conteúdo da página</h3>
+        <div>
+            <div>
+                <p dir="ltr" style="text-align:left;">-------------------------------------------------Clear 1-------------------------------------------------------------------  <br /></p>.data<br /><br />arr:  .word  1, 2, 3, 4, 5, 6, 7, 8, 9, 10<br /><br />.text<br /><br />main:<br />       li $a1, 10                         # size<br />       la $a0, arr                       # endereço de arr<br />     <br />   #inicialização<br />    move  $t0, $zero              #i = 0  <br />   <br />    <br />    slt  $t3, $t0, $a1        # $t3 = (i &lt; size)<br />    bne $t3, $zero, loop1    # se  (i &lt; size) vai para loop 1<br /><p>    j SAIR  <br /></p><p>loop1:<br /></p><br />    sll  $t1, $t0, 2                   # $t1 = i  * 4<br />    add $t2, $a0, $t1             # $t2 =  endereço array[i]<br />    sw  $zero, 0($t2)        #  array[i] = 0<br />    addi  $t0, $t0, 1        #  i = i + 1<br />    slt $t3, $t0, $a1        # $t3 = (i &lt; size)<br />    bne $t3, $zero, loop1      # se (i &lt; size) vai p loop1<br /><br />SAIR:<br /><br />     add $t2, $a0, $zero    # $t2 = &amp;arr<br />     addi $t4, $zero, 1       # t4 = indice i<br /><br />     add $t5, $t2, $zero     #t5 var aux p receber &amp;arr corrente<br />     add $t6, $zero, $zero  #t6 var aux para receber o indice atualizado devidamente shiftado<br /><br />print:      <br />      slti  $s1, $t4, 10          # i &lt; 10<br />      beq $s1, $zero, EXT   <br />          <br />      lw $a0, 0($t5)            # $a0 = arr[i]<br />      addi $v0, $zero, 1<br />      syscall<br />      <br />      addi $t4, $t4, 1           # i = i+ 1<br />      sll $t6, $t4,2         # (i = i+1) em bytes<br />      add $t5, $t2, $t6        # $t5 =  &amp;arr[i]<br />          <br />      j print    <br /><br />EXT:<br />      addi $v0, $zero, 10<br />      syscall<br /><br /><p dir="ltr" style="text-align:left;">-------------------------------------------------Clear 2------------------------------------------------------------------- <br />          #inicialização<br />    move  $t0, $a0                #p = endereço do array <br /></p><p dir="ltr" style="text-align:left;">    </p><p dir="ltr">    sll  $t1, $a1, 2                   # $t1 = size  * 4</p><p dir="ltr">    add $t2, $a0, $t1             # $t2 =  endereço array[size]    </p><br />loop:<br />    sw  $zero, 0($t0)        #  memória[p] = 0<br />    addi $t0, $t0, 4                # p = p +4    <br />    <br />    slt $t3, $t0, $t2        # $t3 = (p &lt; &amp;array[size)<br />    bne $t3, $zero, loop        # se (p &lt; &amp;array[size]) vai p loop<br />    <br /><p></p><p dir="ltr" style="text-align:left;"><br /></p>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+
+            </div>
+        </main>
+        <footer id="page-footer" class="py-3">
+            <div class="container">
+                <div>Este arquivo faz parte do conteúdo descarregado de <a href="https://moodle.utfpr.edu.br/course/view.php?id=18616">Arquitetura e Organização de Computadores</a> por GUILHERME RICARDO BEIRA em quinta, 14 dez 2023, 20:21</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
